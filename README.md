@@ -219,6 +219,6 @@ Extended operation times (up to 1807s for 2C) challenge recursive prediction. SO
 STM-Pro accurately describes the one-dimensional spatial distribution of cylindrical NCM LIB temperature. The trainable spatial BFs demonstrate the characteristics of **one-dimensional parabolic functions**, ensuring spatial smoothness and lower time-averaged error.
 
 <p align="center">
-  <img src="fig/case2-4" width="400" title="Cylindrical Error Spatial Distribution">
+  <img src="fig/case2-4.png" width="400" title="Cylindrical Error Spatial Distribution">
 </p>
 *Fig. S-6: Absolute error distribution for cylindrical NCM LIBs under 2C discharge.*
