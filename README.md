@@ -169,16 +169,19 @@ To balance multiple loss terms, STM-Pro utilizes an **adaptive weighting strateg
 
 STM-Pro significantly outperforms state-of-the-art (SOTA) methods under various operating conditions. For instance, under a standard $4C$ discharge rate at $293.7$ K, STM-Pro reduces the PMSE by over **50%** compared to the best baseline, achieving an overall accuracy improvement of **72.13%**.
 
-### S7.1. Performance on Pouch-type LIBs
+### S7.1 Performance on Pouch-type LIBs
 
 #### Long-term Error Evolution
 As the forecasting horizon extends, STM-Pro maintains highly accurate and stable spatiotemporal predictions.
 
-![Absolute error evolution](<img width="1541" height="886" alt="case1-3 1" src="https://github.com/user-attachments/assets/00927f7c-bd0d-4363-a20b-1657bad0506e" />)
+<p align="center">
+  <img src="fig/case1-3.1.png" width="400" title="Absolute error evolution">
+</p>
 *Fig. S-1: Absolute error evolution of STM-Pro and SOTA methods for pouch-type LIBs temperature long-term prediction.*
 
-![Time-averaged error distribution](<img width="1717" height="1509" alt="case1-3 2" src="https://github.com/user-attachments/assets/d0143c58-0f40-4b7e-8500-d13a4ed87592" />
-)
+<p align="center">
+  <img src="fig/case1-3.2.png" width="400" title="Time-averaged error distribution">
+</p>
 *Fig. S-2: Time-averaged absolute error distribution (Spatial Smoothness comparison).*
 
 #### Generalization Across Discharge Rates (at 297.7 K)
@@ -186,29 +189,36 @@ To assess robustness, experiments were conducted across $2C$, $3C$, and $4C$ dis
 
 **4C Discharge Rate (High Intensity):**
 Rapid internal heat generation causes dramatic temperature rises. STM-Pro captures these fast thermal transients where baselines diverge.
-![4C Prediction](<img width="1653" height="1640" alt="case1-5 1" src="https://github.com/user-attachments/assets/5f44eed7-2065-4bdb-9e47-086446a55743" />
-) ![4C Error](<img width="1502" height="1871" alt="case1-5" src="https://github.com/user-attachments/assets/5a8ad9af-74cd-4446-aabf-5a187c508fa8" />
-)
+<p align="center">
+  <img src="fig/case1-5.1.png" width="400" title="4C 297.7K Prediction">
+</p>
 *Fig. S-3: Temperature prediction and error distribution under 4C discharge at 297.7K.*
 
 **3C & 2C Discharge Rates (Long Duration):**
 Extended operation times (up to 1807s for 2C) challenge recursive prediction. SOTA methods like ConvLSTM-Ts often yield "static" predictions, while STM-Pro tracks subtle variations accurately.
-![3C Prediction](<img width="1653" height="1638" alt="case1-6 1" src="https://github.com/user-attachments/assets/fab7dec1-57bc-404e-a5d3-75601c6f93eb" />
-) ![3C Error](<img width="1502" height="1871" alt="case1-6" src="https://github.com/user-attachments/assets/c245b06c-bbfe-41e2-8bc6-f7c7e6950171" />
-)
+<p align="center">
+  <img src="fig/case1-6.1.png" width="400" title="3C 297.7K Prediction">
+</p>
+<p align="center">
+  <img src="fig/case1-6.png" width="400" title="3C 297.7K Error">
+</p>
 *Fig. S-4: Results under 3C discharge.*
 
-![2C Prediction](<img width="1652" height="1638" alt="case1-7 1" src="https://github.com/user-attachments/assets/364655d9-675e-445e-bc66-ba99ffe7a3b8" />
-) ![2C Error](<img width="1652" height="1638" alt="case1-7 1" src="https://github.com/user-attachments/assets/8bf13941-c835-4821-8285-f34eeaa00c33" />
-)
+<p align="center">
+  <img src="fig/case1-7.1.png" width="400" title="2C 297.7K Prediction">
+</p>
+<p align="center">
+  <img src="fig/case1-7.png" width="400" title="2C 297.7K Error">
+</p>
 *Fig. S-5: Results under 2C discharge.*
 
 ---
 
-### S7.2. Performance on Cylindrical NCM LIBs
+### S7.2 Performance on Cylindrical NCM LIBs
 
 STM-Pro accurately describes the one-dimensional spatial distribution of cylindrical NCM LIB temperature. The trainable spatial BFs demonstrate the characteristics of **one-dimensional parabolic functions**, ensuring spatial smoothness and lower time-averaged error.
 
-![Cylindrical Error Distribution](<img width="1894" height="702" alt="case2-4" src="https://github.com/user-attachments/assets/85f6068a-8a9a-48c0-883e-646827213bb2" />
-)
+<p align="center">
+  <img src="fig/case2-4" width="400" title="Cylindrical Error Spatial Distribution">
+</p>
 *Fig. S-6: Absolute error distribution for cylindrical NCM LIBs under 2C discharge.*
