@@ -54,6 +54,19 @@ $$\text{Attn}_{\text{G}} = W_o \left[ \text{Concat}_{i=1}^h \left( \frac{Q_i (K_
 
 This operation achieves linear computational complexity $\mathcal{O}(N)$. The absence of softmax ensures that the magnitude of the heat source is preserved linearly.
 
+### S2.3 Hidden Encoder & Implementation Details (Table S-II)
+
+Parameters of the hidden encoder are summarized below:
+
+| Component & Notation | Parameters |
+| :--- | :--- |
+| **Feature Extraction (LSTM)** | 18,176 |
+| **Differential Operator** | 33,152 |
+| - *Learnable Eigenvalues* | *64* |
+| - *Dual FFNs* | *16,640* |
+| - *Attention Projections* | *12,288* |
+| - *Output Projection* | *4,160* |
+| **Total Parameters** | **51,328** |
 ---
 
 ## S3. Theoretical Basis of the Trainable Spatial BFs
